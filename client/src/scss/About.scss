@@ -1,0 +1,32 @@
+.about_container{
+    display: block;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding-inline: 2rem;
+    color: white;
+    border-radius: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.dad_container_about{
+        display: inline-block;
+        padding-block: 3rem;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+}
+
+.about_picture{
+            width:150px;
+            height: cover;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+ }
+
+ .about_tittle{
+    padding-bottom: 1rem;
+
+ }
