@@ -29,10 +29,10 @@ function App() {
     !acess && navigate("/");
   }, [acess]);
 
-  // https://rym2-production.up.railway.app/api/character/$%7Bid%7D?key=henrym-mspano91
+  // "https://rickandmortyapi.com/api/character/${id}"
 
   const onSearch = (id) => {
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(
+    axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
       ({ data }) => {
         if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
@@ -52,7 +52,7 @@ function App() {
 
     if (!memoria.includes(randomId)) {
       memoria.push(randomId);
-      axios(`https://rickandmortyapi.com/api/character/${randomId}`).then(
+      axios(`http://localhost:3001/rickandmorty/character/${randomId}`).then(
         ({ data }) => {
           if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
