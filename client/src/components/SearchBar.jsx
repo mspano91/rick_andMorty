@@ -7,8 +7,14 @@ export default function SearchBar({ onSearch }) {
     setId(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSearch(id);
+    setId("");
+  };
+
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <input
         className="inputNav"
         type="search"
@@ -16,15 +22,9 @@ export default function SearchBar({ onSearch }) {
         onChange={handleChange}
         value={id}
       />
-      <button
-        className="addBtn"
-        onClick={() => {
-          onSearch(id);
-          setId("");
-        }}
-      >
+      <button className="addBtn" type="submit">
         ADD
       </button>
-    </div>
+    </form>
   );
 }
