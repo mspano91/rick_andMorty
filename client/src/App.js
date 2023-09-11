@@ -9,27 +9,29 @@ import Favorites from "./components/favorites";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Home from "./components/Home";
 
-const email = "1";
-const password = "1";
+// const email = "1";
+// const password = "1";
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
-  const [acess, setAcess] = useState(false);
+  const [access, setAccess] = useState(false);
 
-  const login = (userData) => {
-    if (userData.email === email && userData.password === password) {
-      setAcess(true);
-      navigate("/home");
-    }
-  };
+  //esta funcion solo la pegue de la consigna
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = "http://localhost:3001/rickandmorty/login/";
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      const { access } = data;
+      setAccess(access);
+      access && navigate("/home");
+    });
+  }
 
   useEffect(() => {
-    !acess && navigate("/");
-  }, [acess]);
-
-  // "https://rickandmortyapi.com/api/character/${id}"
+    !access && navigate("/");
+  }, [access]);
 
   const onSearch = (id) => {
     axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
@@ -68,7 +70,7 @@ function App() {
 
   const onClose = (id) => {
     let charactersFiltered = characters.filter(
-      (character) => character.id !== Number(id)
+      (character) => Number(character.id) !== Number(id)
     );
     setCharacters(charactersFiltered);
   };
@@ -79,7 +81,7 @@ function App() {
         <Nav
           randomHandler={randomHandler}
           onSearch={onSearch}
-          setAcess={setAcess}
+          setAccess={setAccess}
         />
       )}
       <Routes>

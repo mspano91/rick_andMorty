@@ -112,17 +112,35 @@ function Card({ id, name, species, status, gender, origin, image, onClose }) {
   }, [myFavorites, id]);
 
   return (
-    <div className="card_container">
-      {closeBtn && <button onClick={() => onClose(id)}>X</button>}
-      <button onClick={handleFavorite}>{isFav ? "❤️" : "🤍"}</button>
-      <Link to={`/detail/${id}`}>
-        <h2 className="userName">{name}</h2>
-      </Link>
-      <img className="card_img" src={image} alt="" />
-      <h2>Specie: {species}</h2>
-      <h2>Gender: {gender}</h2>
-      <h2>is {status}</h2>
-      <h2>From {origin}</h2>
+    // <div className="card_container">
+    //   {closeBtn && <button onClick={() => onClose(id)}>X</button>}
+    //   <button onClick={handleFavorite}>{isFav ? "❤️" : "🤍"}</button>
+    //   <Link to={`/detail/${id}`}>
+    //     <h2 className="userName">{name}</h2>
+    //   </Link>
+    //   <img className="card_img" src={image} alt="" />
+    //   <h2>Specie: {species}</h2>
+    //   <h2>Gender: {gender}</h2>
+    //   <h2>is {status}</h2>
+    //   <h2>From {origin}</h2>
+    // </div>
+    <div className="myCard">
+      <div className="innerCard">
+        <div className="frontSide">
+          <img className="card_img" src={image} alt="" />
+        </div>
+        <div className="backSide">
+          {closeBtn && <button onClick={() => onClose(id)}>X</button>}
+          <button onClick={handleFavorite}>{isFav ? "❤️" : "🤍"}</button>
+          <Link className="title" to={`/detail/${id}`}>
+            <p>{name}</p>
+          </Link>
+          <p>Specie: {species}</p>
+          <p>Gender: {gender}</p>
+          <p>is {status}</p>
+          <p>From {origin}</p>
+        </div>
+      </div>
     </div>
   );
 }

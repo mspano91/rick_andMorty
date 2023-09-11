@@ -1,5 +1,5 @@
 import Card from "./Card";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { filterCards, orderCards } from "../redux/action";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";

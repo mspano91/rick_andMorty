@@ -1,8 +1,8 @@
 .cards_container{
 display: grid;
-    grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(4, 1fr);
 max-width: 100%;
-padding-inline: 3rem;
+padding-inline: 12rem;
 padding-block:3rem;
 gap: 1.5rem;
 }

@@ -35,11 +35,11 @@ const Login = ({ login }) => {
         <img className="login_name" src={image} />
       </div>
 
-      <div class="login-box">
-        <p>Login</p>
+      <div className="login-box">
+        <p>Welcome</p>
 
         <form onSubmit={handleSubmit}>
-          <div class="user-box">
+          <div className="user-box">
             <input
               autoComplete="off"
               name="email"
@@ -55,7 +55,7 @@ const Login = ({ login }) => {
           )}
           <br />
 
-          <div class="user-box">
+          <div className="user-box">
             <input
               name="password"
               type="password"

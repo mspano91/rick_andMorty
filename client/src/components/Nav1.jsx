@@ -2,10 +2,10 @@ import SearchBar from "./SearchBar";
 import { NavLink, useNavigate } from "react-router-dom";
 import image from "../images/name.png";
 
-const Nav = ({ onSearch, setAcess, randomHandler }) => {
+const Nav = ({ onSearch, setAccess, randomHandler }) => {
   const navigate = useNavigate();
   const handleLogout = () => {
-    setAcess(false);
+    setAccess(false);
     navigate("/");
   };
 
@@ -21,7 +21,7 @@ const Nav = ({ onSearch, setAcess, randomHandler }) => {
         </button>
 
         <button onClick={randomHandler} className="addBtn">
-          RANDOM
+          ADD RANDOM
         </button>
         <SearchBar onSearch={onSearch} />
         <button className="btnnav favoritesBtn">

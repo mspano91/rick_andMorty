@@ -1,5 +1,6 @@
 import { useState } from "react";
 // import styles from "../index.scss";
+
 export default function SearchBar({ onSearch }) {
   const [id, setId] = useState("");
 
@@ -25,6 +26,7 @@ export default function SearchBar({ onSearch }) {
       <button className="addBtn" type="submit">
         ADD
       </button>
+      <button className="addBtn">CLEAR</button>
     </form>
   );
 }
