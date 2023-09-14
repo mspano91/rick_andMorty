@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import styles from "../index.scss";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar({ onSearch, clearCharacters }) {
   const [id, setId] = useState("");
 
   const handleChange = (event) => {
@@ -26,7 +26,9 @@ export default function SearchBar({ onSearch }) {
       <button className="addBtn" type="submit">
         ADD
       </button>
-      <button className="addBtn">CLEAR</button>
+      <button className="addBtn" type="button" onClick={clearCharacters}>
+        CLEAR
+      </button>
     </form>
   );
 }

@@ -130,15 +130,20 @@ function Card({ id, name, species, status, gender, origin, image, onClose }) {
           <img className="card_img" src={image} alt="" />
         </div>
         <div className="backSide">
-          {closeBtn && <button onClick={() => onClose(id)}>X</button>}
-          <button onClick={handleFavorite}>{isFav ? "❤️" : "🤍"}</button>
-          <Link className="title" to={`/detail/${id}`}>
-            <p>{name}</p>
-          </Link>
+          {closeBtn && (
+            <button className="closeBut" onClick={() => onClose(id)}>
+              XClose
+            </button>
+          )}
+          <button className="favBtn" onClick={handleFavorite}>
+            {isFav ? "❤️" : "🤍"}
+          </button>
+
+          <h1>Name: {name}</h1>
           <p>Specie: {species}</p>
-          <p>Gender: {gender}</p>
-          <p>is {status}</p>
-          <p>From {origin}</p>
+          <Link className="detail" to={`/detail/${id}`}>
+            <p>+ Details</p>
+          </Link>
         </div>
       </div>
     </div>

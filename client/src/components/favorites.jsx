@@ -49,9 +49,9 @@ const Favorites = () => {
         <option value="allCharacters">All chars</option> */}
       </select>
 
-      {myFavorites?.map((fav) => {
-        return (
-          <div className="cards_container">
+      <div className="cards_container">
+        {myFavorites?.map((fav) => {
+          return (
             <Card
               key={fav.id}
               id={fav.id}
@@ -60,9 +60,9 @@ const Favorites = () => {
               gender={fav.gender}
               image={fav.image}
             />
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

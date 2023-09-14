@@ -2,7 +2,7 @@ import SearchBar from "./SearchBar";
 import { NavLink, useNavigate } from "react-router-dom";
 import image from "../images/name.png";
 
-const Nav = ({ onSearch, setAccess, randomHandler }) => {
+const Nav = ({ onSearch, setAccess, randomHandler, clearCharacters }) => {
   const navigate = useNavigate();
   const handleLogout = () => {
     setAccess(false);
@@ -23,7 +23,7 @@ const Nav = ({ onSearch, setAccess, randomHandler }) => {
         <button onClick={randomHandler} className="addBtn">
           ADD RANDOM
         </button>
-        <SearchBar onSearch={onSearch} />
+        <SearchBar onSearch={onSearch} clearCharacters={clearCharacters} />
         <button className="btnnav favoritesBtn">
           <NavLink to="/favorites"> Favorites</NavLink>
         </button>

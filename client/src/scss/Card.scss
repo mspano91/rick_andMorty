@@ -1,26 +1,15 @@
-// .card_container{
-//     height: 300px;
-//     width: 300px;
-//     background-color: rgba(0, 0, 0, 0.635);
-//     border-radius: 1rem;
-// }
+.closeBut{
+    background-color: transparent;
+    width: 100px;
+    border: none;
+    font-size: 30px;
+}
 
-// .card_container h2 {
-// font-size: 13px;
-// text-decoration: none;
-//     color: aliceblue;
-// }
-
-
-
-
-// .userName{
-// //     color: aliceblue;
-// }
-
-
-
-////
+.favBtn{
+        background-color: transparent;
+            border: none;
+            font-size: 30px;
+}
 .myCard {
     height: 300px;
     width: 300px;
@@ -34,7 +23,7 @@
 }
 
 .title {
-    color: #ffffff;
+    color: #010101;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     font-weight: 900;
@@ -75,10 +64,6 @@
     font-weight: 700;
 }
 
-// .frontSide,
-// .frontSide::before {
-//     background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
-// }
 
 .backSide,
 .backSide::before {
@@ -116,4 +101,50 @@
     100% {
         opacity: 0.3;
     }
+}
+
+
+
+.detail {
+    appearance: none;
+    background-color: transparent;
+    // border: 0.125em solid #cc3bc0;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #e7e7e7;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 17px;
+    // font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    // min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    // margin-left: 1rem;
+}
+
+.detail:disabled {
+    pointer-events: none;
+}
+
+.detail:hover {
+    color: #a61181;
+    background-color: #ffffff;
+    box-shadow: rgb(255, 255, 255) 0 1px 10px;
+    transform: translateY(-1px);
+}
+
+.detail:active {
+    box-shadow: none;
+    transform: translateY(0);
 }

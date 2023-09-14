@@ -4,7 +4,7 @@ let validate = function (userData) {
   let numberRegex = /.*\d+.*/;
 
   if (!emailRegex.test(userData.email)) {
-    errors.email = "your email is wrong my king";
+    errors.email = "your email is wrong";
   }
   if (!userData.email) {
     errors.email = "must be an email";
@@ -17,7 +17,7 @@ let validate = function (userData) {
     errors.password = "should be at least 1 number";
   }
   if (userData.password.length < 6 || userData.password.length > 10) {
-    errors.password = "must be between 6 and 10 characters";
+    errors.password = "must be among 6 and 10 characters";
   }
   return errors;
 };
