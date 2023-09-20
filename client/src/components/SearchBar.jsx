@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import styles from "../index.scss";
 
 export default function SearchBar({ onSearch, clearCharacters }) {
   const [id, setId] = useState("");

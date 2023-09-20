@@ -9,6 +9,7 @@
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-redux": "^8.1.2",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
@@ -20,9 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-     "test": "jest --detectOpenHandles",
+    "test": "jest --detectOpenHandles",
     "eject": "react-scripts eject"
-   
   },
   "eslintConfig": {
     "extends": [

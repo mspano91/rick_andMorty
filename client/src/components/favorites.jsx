@@ -29,9 +29,6 @@ const Favorites = () => {
             {order.name}
           </option>
         ))}
-
-        {/* <option value="A">Ascendente</option>
-        <option value="D">Descendente</option> */}
       </select>
 
       <select className="btn_filter" onChange={handleFilter}>
@@ -42,11 +39,6 @@ const Favorites = () => {
             </option>
           )
         )}
-        {/* <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Genderless">Genderless</option>
-        <option value="unknown">unknown</option>
-        <option value="allCharacters">All chars</option> */}
       </select>
 
       <div className="cards_container">
@@ -66,13 +58,5 @@ const Favorites = () => {
     </div>
   );
 };
-
-// const mapStateToProps = (state) => {
-//   return {
-//     myFavorites: state.myFavorites,
-//   };
-// };
-
-// export default connect(mapStateToProps, null)(Favorites);
 
 export default Favorites;

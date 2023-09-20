@@ -15,17 +15,6 @@ function App() {
   const location = useLocation();
   const [access, setAccess] = useState(false);
 
-  //esta funcion solo la pegue de la consigna
-  // function login(userData) {
-  //   const { email, password } = userData;
-  //   const URL = "http://localhost:3001/rickandmorty/login/";
-  //   axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-  //     const { access } = data;
-  //     setAccess(access);
-  //     access && navigate("/home");
-  //   });
-  // }
-
   async function login(userData) {
     try {
       const { email, password } = userData;
@@ -44,18 +33,6 @@ function App() {
   useEffect(() => {
     !access && navigate("/");
   }, [access]);
-
-  // const onSearch = (id) => {
-  //   axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
-  //     ({ data }) => {
-  //       if (data.name) {
-  //         setCharacters((oldChars) => [...oldChars, data]);
-  //       } else {
-  //         window.alert("¡No hay personajes con este ID!");
-  //       }
-  //     }
-  //   );
-  // };
 
   async function onSearch(id) {
     try {

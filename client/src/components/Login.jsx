@@ -48,7 +48,6 @@ const Login = ({ login }) => {
               onChange={handleChange}
               placeholder="email"
             />
-            {/* <label htmlFor="email">email</label> */}
           </div>
           {errors.email && (
             <p style={{ fontSize: "10px", color: "white" }}>{errors.email}</p>
@@ -63,7 +62,6 @@ const Login = ({ login }) => {
               onChange={handleChange}
               placeholder="password"
             />
-            {/* <label htmlFor="password"></label> */}
           </div>
 
           {errors.password && (

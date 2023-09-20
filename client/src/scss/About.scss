@@ -1,14 +1,16 @@
 .about_container{
     display: block;
     width: 500px;
-    height: 450px;
+    height: 620px;
     background-color: rgba(19, 19, 19, 0.726);
     padding-inline: 2rem;
     color: white;
-    border-radius: 3rem;
+    border-radius: 2rem;
     justify-content: center;
     align-items: center;
     padding-top: 3rem;
+    margin-top: .5rem;
+        
 }
 
 .dad_container_about{
@@ -20,7 +22,7 @@
 }
 
 .about_picture{
-            width:150px;
+            width:300px;
             height: cover;
             border-radius: 2rem;
             margin-bottom: 1rem;

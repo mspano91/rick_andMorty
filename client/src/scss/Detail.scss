@@ -4,19 +4,20 @@
     justify-content: center;
     align-items: center;
     min-height: 70vh;
+
 }
 .detail_container {
     display: flex;
     flex-direction: column;
     width: 500px;
     height: 500px;
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: rgba(0, 0, 0, 0.433);
     padding-inline: 2rem;
     color: white;
-    border-radius: 3rem;
+    border-radius: 2rem;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
     padding-block: 1.5rem;
 }
 

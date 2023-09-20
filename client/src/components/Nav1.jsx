@@ -37,7 +37,6 @@ const Nav = ({ onSearch, setAccess, randomHandler, clearCharacters }) => {
           Logout
         </button>
       </div>
-      {/* <button onClick={charRandom}>random</button> */}
     </div>
   );
 };
