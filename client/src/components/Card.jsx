@@ -18,7 +18,9 @@ function Card({ id, name, species, status, gender, origin, image, onClose }) {
       toast.success("Removed from favorites."); //toast de https://react-hot-toast.com/docs/toast
     } else {
       setIsFav(true);
-      dispatch(addFav({ id, name, species, status, gender, origin, image }));
+      dispatch(
+        addFav({ id: Number(id), name, species, status, gender, origin, image })
+      );
       toast.success("Added to favorites."); //toast de https://react-hot-toast.com/docs/toast
     }
   };

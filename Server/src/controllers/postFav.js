@@ -3,6 +3,7 @@ const { Favorite } = require("../DB_connection");
 module.exports = async (req, res) => {
   try {
     const { id, name, origin, status, image, species, gender } = req.body;
+    console.log(req.body);
     if (!id || !name || !origin || !status || !image || !species || !gender) {
       return res.status(401).send("missing data");
     }

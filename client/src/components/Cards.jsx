@@ -14,7 +14,7 @@ export default function Cards({ characters, onClose }) {
               species={species}
               gender={gender}
               image={image}
-              origin={origin.name}
+              origin={origin}
               onClose={onClose}
             />
           );
