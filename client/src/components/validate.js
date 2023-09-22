@@ -16,8 +16,8 @@ let validate = function (userData) {
   if (!numberRegex.test(userData.password)) {
     errors.password = "should be at least 1 number";
   }
-  if (userData.password.length < 6 || userData.password.length > 10) {
-    errors.password = "must be among 6 and 10 characters";
+  if (userData.password.length < 6 || userData.password.length > 12) {
+    errors.password = "must be among 6 and 12 characters";
   }
   return errors;
 };
